@@ -69,7 +69,7 @@ for (x in samples) {
   units = 'in'
  )
  # Filtering
- datObjs[[x]] <- subset(datObjs[[x]], subset = nFeature_RNA > 200 & nFeature_RNA < 2500 & percent.hb < 10 & percent.mt < 10)
+ datObjs[[x]] <- subset(datObjs[[x]], subset = nFeature_RNA > 200 & nFeature_RNA < 5000 & percent.mt < 10)
  plt <-VlnPlot(datObjs[[x]], features = c("nFeature_RNA", "nCount_RNA", "percent.mt", "percent.hb"), ncol = 4)
  ggsave(
   plot = plt,
